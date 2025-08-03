@@ -3,7 +3,7 @@ import {NavLink} from 'react-router-dom';
 import './Navbar.css'
 
 export default function Navbar() {
-
+    
     const [isLogin, setIsLogin] = useState(false);
   return (
     <div className='navbar'>
@@ -18,10 +18,18 @@ export default function Navbar() {
             </ul>
         </div>
         <div className="right">
+            {isLogin? 
+            <ul>
+                <NavLink to='logout'>Logout</NavLink>
+            </ul> 
+            :
             <ul>
                 <NavLink to='login'>Login</NavLink>
                 <NavLink to='signup'>Sign Up</NavLink>
             </ul>
+            }
+
+            
         </div>
     </div>
   )

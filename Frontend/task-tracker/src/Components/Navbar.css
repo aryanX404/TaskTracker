@@ -1,0 +1,40 @@
+*{
+    color: var(--text-color);
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(46, 30, 30);
+    height: 70px;
+    padding: 0px 20px;
+}
+
+.left h1:hover{
+    cursor: pointer;
+}
+
+ul{
+    display: flex;
+    gap: 2em;
+    list-style: none;
+    
+}
+
+ul a{
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+}
+
+ul a:hover{
+    cursor: pointer;
+}
+
+ul .active{
+    text-decoration: underline;
+    color: rgb(0, 115, 255);
+    text-decoration-color: brown;
+    text-underline-offset: 15px;
+}

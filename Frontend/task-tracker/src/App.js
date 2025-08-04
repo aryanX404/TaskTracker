@@ -10,13 +10,17 @@ import HomePage from './Components/HomePage'
 
 function App() {
   const [isLogin, setIsLogin] = useState(false);
+  if(!isLogin){
+    localStorage.removeItem("username");
+    localStorage.setItem("username","User");
+  }
   return(
     <div className='app'>
       
       <Routes>
         <Route path='/' element={<HomePage isLogin={isLogin} setIsLogin={setIsLogin}/>}>
           <Route path='/login' element={<Login setIsLogin={setIsLogin}/>}/>
-          <Route path='/signup' element={<SignUp/>}/>
+          <Route path='/signup' element={<SignUp isLogin={isLogin} setIsLogin={setIsLogin}/>}/>
           <Route path='/dashboard' element={<Dashboard/>}/>
           <Route path='/trackers' element={<Trackers/>}/>
           <Route path='/profile' element={<Profile/>}/>

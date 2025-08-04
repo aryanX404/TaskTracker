@@ -1,5 +1,14 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Francois+One&display=swap');
+/* font-family: "Francois One", sans-serif; */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Francois+One&family=Yeseva+One&display=swap');
+/* font-family: "Francois One", sans-serif; */
+
+
 :root{
-    --bg-color:hsl(240, 82%, 4%);
+    --bg-color:hsl(240, 80%, 4%);
     --text-color:hsl(240, 82%, 95%);
 
 }

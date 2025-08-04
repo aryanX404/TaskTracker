@@ -36,6 +36,7 @@ span:hover{
 }
 
 input{
+    font-family: "Francois One", sans-serif;
     background-color: white;
     /* background-color: var(--bg-color); */
     color: var(--bg-color);
@@ -99,4 +100,13 @@ input:not([type='submit']):focus {
     width: 90%;
     color: rgb(0, 129, 28);
     text-align: center;
+}
+.warn{
+    height: 41.6px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    width: 90%;
+    color: rgb(203, 132, 0);
+    text-align: center;
+
 }

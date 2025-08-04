@@ -15,7 +15,7 @@ async function handleSignUpUser(req, res){
         if(userExist){
             return res.status(400).json({
                 message:"User Already Exists, You can Login",
-                class: 'success message'
+                class: 'warn message'
             })
         }
 

@@ -36,9 +36,11 @@ export default function SignUp({setIsLogin,isLogin}) {
             setMessage(data.message);
             setMessageClass(data.class);
             if(response.ok){
+                localStorage.setItem("username", data.user.firstName);
                 navigate('/dashboard')
                 setIsLogin(true)
                 alert('Logged in Successfully')
+
             }
                 
 

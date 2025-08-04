@@ -5,6 +5,8 @@ export default function Navbar({isLogin , setIsLogin}) {
     function Logout(){
         setIsLogin(false)
         alert("Logged out")
+        localStorage.removeItem("username");
+
     }
     
   return (

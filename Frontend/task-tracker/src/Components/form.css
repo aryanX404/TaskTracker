@@ -38,7 +38,7 @@ span:hover{
 input{
     background-color: white;
     /* background-color: var(--bg-color); */
-    color: var(--text-color);
+    color: var(--bg-color);
     width: 90%;
     padding: 12px 20px;
     border-radius: 10rem;
@@ -97,6 +97,6 @@ input:not([type='submit']):focus {
     padding: 12px 20px;
     border-radius: 10px;
     width: 90%;
-    color: red;
+    color: rgb(0, 129, 28);
     text-align: center;
 }

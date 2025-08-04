@@ -25,7 +25,6 @@ export default function SignUp() {
     }
 
     async function handleSubmit(e){
-        console.log('you clicked submit');
         e.preventDefault();
         try{
             const response = await fetch('http://localhost:8000/signup',{

@@ -2,7 +2,7 @@ import React, {useState}from 'react'
 import { useNavigate } from 'react-router-dom';
 import './form.css'
 
-export default function SignUp() {
+export default function SignUp({setIsLogin,isLogin}) {
     const navigate = useNavigate();
     const [message, setMessage] = useState('');
     const [messageClass, setMessageClass] = useState('message');
@@ -35,9 +35,13 @@ export default function SignUp() {
             const data = await response.json();
             setMessage(data.message);
             setMessageClass(data.class);
-            // if(response.ok){
-            //     internalStorage.setItem({name:data.user.firstName})
-            // }
+            if(response.ok){
+                navigate('/dashboard')
+                setIsLogin(true)
+                alert('Logged in Successfully')
+            }
+                
+
 
         }catch(error){
             setMessage("error occured at server");

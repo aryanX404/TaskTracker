@@ -19,6 +19,8 @@ ul{
     display: flex;
     gap: 2em;
     list-style: none;
+    justify-content: center;
+    align-items: center;
     
 }
 
@@ -30,6 +32,7 @@ ul a{
 
 ul a:hover{
     cursor: pointer;
+    color: wheat;
 }
 
 ul .active{
@@ -37,4 +40,11 @@ ul .active{
     color: rgb(0, 115, 255);
     text-decoration-color: brown;
     text-underline-offset: 15px;
+}
+
+.profile{
+    height: 40px;
+    width: 40px;
+    border-radius: 30px;
+    background-color: white;
 }

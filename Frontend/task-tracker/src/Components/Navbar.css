@@ -11,6 +11,10 @@
     padding: 0px 20px;
 }
 
+.left h1{
+    font-family: "Francois One", sans-serif;
+}
+
 .left h1:hover{
     cursor: pointer;
 }
@@ -27,6 +31,7 @@ ul{
 ul a{
     text-decoration: none;
     transition: all 0.3s ease;
+    font-family: "Francois One", sans-serif;
 
 }
 

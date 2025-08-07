@@ -33,12 +33,17 @@ export default function SignUp({setIsLogin,isLogin}) {
                 body:JSON.stringify(formData)
             })
             const data = await response.json();
+            console.log('data: ', data);
             setMessage(data.message);
             setMessageClass(data.class);
             if(response.ok){
-                navigate('/dashboard')
+                if (data.token) {
+                    localStorage.setItem('token', data.token);
+                }
+                localStorage.setItem('userName',data.user.firstName)
                 setIsLogin(true)
                 alert('Logged in Successfully')
+                navigate('/dashboard')
             }
                 
 
@@ -74,7 +79,7 @@ export default function SignUp({setIsLogin,isLogin}) {
 
             <input 
             type='submit' 
-            value='Sign Up' 
+            value='Login' 
             className='submit-btn'
             />
 

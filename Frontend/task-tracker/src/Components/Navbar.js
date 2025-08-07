@@ -1,8 +1,10 @@
 import {NavLink} from 'react-router-dom';
 import './Navbar.css'
 
-export default function Navbar({isLogin , setIsLogin}) {
-    function Logout(){
+export default function Navbar({isLogin,setIsLogin}) {
+    function Logout(setIsLogin){
+        localStorage.removeItem("token")
+        localStorage.removeItem("userName")
         setIsLogin(false)
         alert("Logged out")
     }
@@ -21,15 +23,15 @@ export default function Navbar({isLogin , setIsLogin}) {
         </div>
         <div className="right">
             {isLogin? 
-            <ul>
+            (<ul>
                 <div className="profile"></div>
                 <NavLink onClick={Logout} to='login'>Logout</NavLink>
-            </ul> 
+            </ul>) 
             :
-            <ul>
+            (<ul>
                 <NavLink to='login'>Login</NavLink>
                 <NavLink to='signup'>Sign Up</NavLink>
-            </ul>
+            </ul>)
             }
 
             

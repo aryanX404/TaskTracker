@@ -2,6 +2,8 @@ import React from 'react'
 import './Dashboard.css'
 
 export default function Dashboard({isLogin}) {
+  
+
   return (
     <>
     <div className="dashboard-container">
@@ -10,8 +12,8 @@ export default function Dashboard({isLogin}) {
         <div>Welcome back! <span>{localStorage.getItem('userName')}</span></div>
         <div className="containers">
           <div className="container">
-            <h2>Tasks</h2>
-            <p>Manage your tasks here.</p>
+            <h2>Timer</h2>
+            <div className="showtime"></div>
           </div>
           <div className="container">
             <h2>Trackers</h2>
@@ -27,8 +29,8 @@ export default function Dashboard({isLogin}) {
         <div>Please log in to access your dashboard.</div>
         <div className="containers">
           <div className="container">
-            <h2>Tasks</h2>
-            <p>Manage your tasks here.</p>
+            <h2>Timer</h2>
+            <div className="showtime"></div>
           </div>
           <div className="container">
             <h2>Trackers</h2>
